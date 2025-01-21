@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compstible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>Search | Favorite</title>
+    <!-- Link to css -->
+    <link rel="stylesheet" href="../css/style.css" >
+    <link rel="stylesheet" href="../css/search-page.css" >
+    <!-- Fav icons -->
+    <link rel="shortcut icon" href="../img/fav-icon.png" type="../img/x-icon">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+        <!-- Nav  -->
+        <div class="nav container">
+
+            <!-- Logo -->
+            <a href="../index.html" class="logo">A
+                Movie<span>Maze</span>
+            </a>
+
+
+
+<!-- ------------------------------------------------------------------------------------------------>
+<!---------------------------------- NavBar START------------------------------------------------- -->
+
+          <div class="navbar">
+            <a href="../index.html" class="nav-link nav-active">
+                <i class='bx bx-home-alt'></i>
+                <span class="nav-link-title">Home</span>
+            </a>
+
+            <a href="html/search-page.html" class="nav-link">
+                <i class='bx bx-compass'></i>
+                <span class="nav-link-title">Search</span>
+            </a>
+
+            <a href="#Trending" class="nav-link">
+                <i class='bx bxs-hot'></i>
+                <span class="nav-link-title">Trending</span>
+            </a>
+
+            <a href="javascript:void(0);" class="nav-link" id="openFavorites">
+                <i class='bx bxs-heart'></i>
+                <span class="nav-link-title">Favorite</span>
+            </a>
+            
+            
+            <a href="http://localhost/Netflix_V2/src/frontend/php/login-signin.php" class="nav-link">
+                <i class='bx bx-log-in'></i>
+                <span class="nav-link-title">Sign In / Log In</span>
+             </a>
+
+        </div>
+     </div>
+<!----------------------------------- NavBar END-------------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------>
+      
+
+
+
+<!-- ------------------------------------------------------------------------------------------------>
+<!---------------------------------- SEARCH-FORM START----------------------------------------------->
+
+    <form action="">
+        <div class="search-container">
+            <div class="search-box" id="search-box">
+                <input type="search" name="" id="search-input" placeholder="Search Movie">
+                <i class='bx bx-search'></i>
+            </div>
+        </div>
+    </form>
+<!----------------------------------- SEARCH-FORM END--------------------------------------------- -->
+<!-- ------------------------------------------------------------------------------------------------>
+ 
+
+
+<!-- ------------------------------------------------------------------------------------------------>
+<!---------------------------  Movie Posters Gallery START------------------------------------------->
+    <!-- Image Gallery for Movies -->
+    <div class="image-container"></div>
+
+    <!-- Modal for Movie Details -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <!-- Movie Image Container -->
+                <div class="modal-image-container">
+                    <img id="modalImage" class="modal-image" src="" alt="Movie Poster">
+                </div>
+
+                <!-- Movie Info Section -->
+                <div id="movieInfo" class="movie-info">
+                    <div id="movieDetails" class="movie-details">
+                        <!-- Mini Info like Genre, Director, Year, etc -->
+                        <p id="movieYear"></p>
+                        <p id="movieGenre"></p>
+                        <p id="movieDirector"></p>
+                    </div>
+
+                    <!-- Movie Rating Section -->
+                    <div id="movieRating" class="movie-rating">
+                        <strong>Rating: </strong><span id="ratingValue"></span>
+                    </div>
+                </div>
+
+                <!-- Embedded Video Container -->
+                <div id="modalVideoContainer" class="modal-video-container">
+                    <!-- Video will be embedded here -->
+                </div>
+
+                <!-- Favorite Button -->
+                <button id="favoriteButton" class="favorite-btn">Add to Favorites</button>
+
+            </div>
+        </div>
+    </div>
+<!----------------------------  Movie Posters Gallery END-------------------------------------------->
+<!-- ------------------------------------------------------------------------------------------------>
+ 
+    
+
+<!-- ------------------------------------------------------------------------------------------------>
+<!----------------------- Favorite Movies Modal (Popup Window) START--------------------------------->
+
+<div id="favoritesModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeFavorites">&times;</span>
+        <h2>Favorites</h2>
+        <div id="favoriteMoviesList"></div> <!-- This will dynamically show the favorite movies -->
+    </div>
+</div>
+
+
+<!----------------------- Favorite Movies Modal (Popup Window) END----------------------------------->
+<!-- ------------------------------------------------------------------------------------------------>
+
+
+
+
+<!-- Include the plain JavaScript file -->
+<script src="../../backend/components/search.js"></script>
+<script src="../../backend/components/search-pop.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/favorite-btn.js"></script>
+<script src="js/favorite-btn.js"></script>
+<script src="../../backend/components/trending-drama.js"></script>
+<script src="../../backend/components/favorite.js"></script>
+
+<script>
+    // Get all favorite buttons on the page
+    const favoriteButtons = document.querySelectorAll('.favorite-button');
+
+    // Add event listeners to each button
+    favoriteButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const movieId = button.getAttribute('data-movie-id'); // Or however you get the movie ID
+            const movieTitle = button.getAttribute('data-movie-title'); // Movie title
+            const moviePoster = button.getAttribute('data-movie-poster'); // Movie poster URL
+
+            // Store the movie data in localStorage (favorites list)
+            const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            const movie = {
+                Title: movieTitle,
+                Poster: moviePoster,
+                imdbID: movieId
+            };
+
+            // Check if the movie is already in the favorites
+            if (!favorites.some(fav => fav.imdbID === movie.imdbID)) {
+                favorites.push(movie);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+            }
+
+            alert('Movie added to favorites!');
+        });
+    });
+</script>
+
+</body>
+</html>

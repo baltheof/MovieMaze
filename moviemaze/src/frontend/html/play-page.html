@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compstible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>The Little Mermaid</title>
+    <!-- Link to css -->
+    <link rel="stylesheet" href="../css/style.css" >
+    <link rel="stylesheet" href="../css/play-page.css" >
+    <!-- Fav icons -->
+    <link rel="shortcut icon" href="../img/fav-icon.png" type="../img/x-icon">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+        <!-- Nav  -->
+        <div class="nav container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                Movie<span>Maze</span>
+            </a>
+
+
+            <!-- NavBar -->
+            <div class="navbar">
+                <a href="../index.html" class="nav-link nav-active">
+                    <i class='bx bx-home-alt' ></i>
+                    <span class="nav-link-title">Home</span>
+      
+                <a href="search-page.html" class="nav-link">
+                    <i class='bx bx-compass' ></i>
+                    <span class="nav-link-title">Search</span>
+                </a>
+
+                <a href="#Trending" class="nav-link">
+                    <i class='bx bxs-hot'></i>
+                    <span class="nav-link-title">Trending</span>
+                </a>
+
+                <a href="#Favorite" class="nav-link">
+                    <i class='bx bxs-heart' ></i>
+                    <span class="nav-link-title">Favorite</span>
+                </a>
+
+                <a href="http://localhost/Netflix_V2/src/frontend/php/login-signin.php" class="nav-link">
+                    <i class='bx bx-log-in'></i>
+                    <span class="nav-link-title">Sign In / Log In</span>
+                 </a>
+                 
+            </div>
+        </div>
+
+    <!-- play movie container -->
+     <div class="play-container container">
+
+        <!-- play image -->
+        <img src="../img/06-3.jpeg" alt="" class="play-img" id="play-img">
+
+        <!-- play text -->
+        <div class="play-text" id="movie-title">
+            <h2>The Little Mermaid</h2>
+            <div class="rating" id="rating">
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star' ></i>
+                <i class='bx bxs-star-half' ></i>
+            </div>
+        
+
+            <!-- tags -->
+            <div class="tags" id="tags">
+                <span>Animation</span>
+                <span>Romance</span>
+                <span>4K</span>
+            </div>
+
+            <!-- trailer button -->
+            <div class="btn-container">
+                <a href="../img/The Little Mermaid _ Official Trailer.mp4">
+                    <button class="trailer-btn">WATCH TRAILER</button>
+                    <button class="play-btn">WATCH MOVIE</button>
+                </a>
+            </div>
+        </div>
+
+            <!-- video container -->
+             <div class="video-container">
+                <!-- video Box -->
+                 <div class="video-box">
+                    <video id="my-video" src="../img/The Little Mermaid _ Official Trailer.mp4" controls></video>
+                
+                    <!-- close video icon -->
+                    <i class='bx bx-x close-video'></i>
+                
+                </div>
+             </div>
+            
+
+
+        
+     </div>
+
+    <!-- COPYRIGHT -->
+    <!-- <div class="copyright">
+        <p>&#169; carpoolVenom All Right Reserved</p>
+    </div> -->
+
+    <!-- Link to js -->
+    <script src="../js/app.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

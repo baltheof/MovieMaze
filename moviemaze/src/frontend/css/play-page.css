@@ -1,0 +1,195 @@
+
+/* play page */
+.play-img{
+    position: relative;
+    top: -60px;
+    left: 20px;
+    bottom: 0px;
+    right: 20px;
+}
+
+.play-text{
+    position: absolute;
+    bottom: 0;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    font-size: 28px;
+}
+
+.play-container{
+    position: relative;
+    min-height: 540px;
+    margin-top: 5rem !important;
+}
+
+.play-img{
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+    object-position:center ;
+    z-index: -1;
+}
+
+.tags{
+    font-size: 25px;
+   display: flex;
+   align-items: center;
+   column-gap: 8px;
+   margin: 1rem 0;
+}
+
+.tags span{
+    padding: 0 4px;
+}
+
+.rating{
+    column-gap: 6px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--rating-color);
+    margin-top: 4px;
+}
+
+/* trailer-btn */
+.trailer-btn {
+
+
+    margin-top: 10px;
+    background-color: var(--main-color); /* Makes the button blue */
+    border: none;
+    color: white; /* Sets the text color to white */
+    padding: 10px 20px; /* Adjust padding for button size */
+    border-radius: 10px; /* Slightly rounds the corners */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    transition: transform 0.5s ease-in-out; /* Smooth and subtle transition effect */
+}
+
+.trailer-btn:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+/* PLAY BUTTON */
+.play-btn {
+    margin-top: 10px;
+    background-color: var(--main-color); /* Makes the button blue */
+    border: none;
+    color: white; /* Sets the text color to white */
+    padding: 10px 20px; /* Adjust padding for button size */
+    border-radius: 10px; /* Slightly rounds the corners */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    transition: transform 0.5s ease-in-out; /* Smooth and subtle transition effect */
+}
+
+.play-btn:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+/* Video Container (Hidden by Default) */
+.video-container {
+    display: none; /* Hidden initially */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  /* Video Box */
+  .video-box {
+    position: relative;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Close Button */
+  .close-video {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+  }
+
+  .modal-button{
+    background-color: transparent; /* Transparent background */
+    color: black; /* Black text */
+    border: 2px solid black; /* Add a black border */
+    padding: 10px 20px; /* Adjust padding for a larger clickable area */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Video Styling */
+  video {
+    width: 1200%; /* Stretch video to fit width */
+    height: 100%; /* Stretch video to fit height */
+    object-fit: cover; /* Ensures video covers the container without distortion */
+  }
+
+  /* Styling for the Load More button */
+  .load-more-button {
+    background-color: transparent; /* Transparent background */
+    color: black; /* Black text */
+    border: 2px solid black; /* Add a black border */
+    padding: 10px 20px; /* Adjust padding for a larger clickable area */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.load-more-button:hover {
+    background-color: black; /* Dark background when hovered */
+    color: white; /* White text on hover */
+}
+
+
+
+/* Hover effect */
+button:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb); /* Reverse the gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+/* Focus effect (when button is clicked or tapped) */
+button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 4px rgba(38, 104, 255, 0.5); /* Add a blue glow */
+}
+
+/* Active effect (when button is pressed) */
+button:active {
+    transform: scale(0.98); /* Slightly shrink when clicked */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Reduce the shadow */
+}
+
+/* Style the modal image */
+#modalImage {
+    width: 50%; /* Adjust the width to make it smaller (you can adjust this value as needed) */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Optional: max-width to limit the size */
+    margin: 20px auto; /* Center the image horizontally */
+    display: block; /* Block display for centering */
+}

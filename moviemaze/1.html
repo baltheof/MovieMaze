@@ -1,0 +1,915 @@
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------SIGN IN FORM---------------------------------------------------------------------------------------------------------- -->
+
+<!----------------------------- Form box ----------------------------------->
+<div class="form-box">
+
+    <!------------------- Login form -------------------------->
+    <form action="signIn.php" method="POST">
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" name="surname" placeholder="Surname" required>
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" name="password" placeholder="Password" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" name="remember_me" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!------------------- Registration form -------------------------->
+    <form action="signIn.php" method="POST">
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" name="surname" placeholder="Surname" required>
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" name="email" placeholder="Email" required>
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" name="password" placeholder="Password" required>
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" name="agreeterms" value="1" id="register-check" required>
+                    <label for="register-check"> I agree to all terms and conditions</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+<script src="../js/signIn.js"></script>
+</body>
+</html>
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+<!-- ------------------------------------------------------------INDEX HTML---------------------------------------------------------------------------------------------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compstible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>MovieMaze</title>
+    <!-- Link to css -->
+    <link rel="stylesheet" href="css/style.css" >
+    <!-- Fav icons -->
+    <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+    <!-- Root div for React app -->
+    <div id="root"></div>
+
+    <!-- header -->
+    <header>
+        <!-- Nav  -->
+        <div class="nav container">
+
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                Movie<span>Maze</span>
+            </a>
+
+            <!-- Search Box -->
+             <!-- <div class="search-box" id="search-box">
+                <input type="search" name="" id="search-input" placeholder="Search Movie">
+                <i class='bx bx-search'></i>
+
+                
+            </div> -->
+
+            <!-- User -->
+            <!-- <a href="#" class="user">
+                <img src="img/user.jpg" alt="" class="user-img">               
+            </a> -->
+
+            <!-- NavBar -->
+            <div class="navbar">
+                <a href="#home" class="nav-link nav-active">
+                    <i class='bx bx-home-alt' ></i>
+                    <span class="nav-link-title">Home</span>
+                </a>
+
+                <a href="html/search-page.html" class="nav-link">
+                    <i class='bx bx-compass' ></i>
+                    <span class="nav-link-title">Search</span>
+                </a>
+
+                <a href="#Trending" class="nav-link">
+                    <i class='bx bxs-hot'></i>
+                    <span class="nav-link-title">Trending</span>
+                </a>
+
+                <a href="#Movies" class="nav-link">
+                    <i class='bx bxs-movie' ></i>
+                    <span class="nav-link-title">Movies</span>
+                </a>
+
+
+
+
+
+                <a href="#Favorite" class="nav-link">
+                    <i class='bx bxs-heart' ></i>
+                    <span class="nav-link-title">Favorite</span>
+                </a>
+            </div>
+        </div>
+
+    <!-- Home -->
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <!-- list item -->
+         <div class="list">
+
+            <!-- THE LIITLE MERMAID -->
+            <div class="item">
+                    <img src="img/06-3.jpeg">
+                    <div class="content">
+                        <div class="director">Rob Marshall</div>
+                        <div class="title">The Little Mermaid</div>
+                        <div class="topic">Romance</div>
+                        <div class="des">
+                            Disney's 2023 The Little Mermaid follows Ariel, <br>
+                            a mermaid who trades her voice for a chance to <br>
+                            live on land and find love.
+                        </div>
+                        <!-- BUTTONS -->
+                        <div class="buttons" >
+                            <a href="html/play-page.html">
+                                <button>WATCH</button>
+                            </a>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Beauty and the Beast -->
+            <div class="item">
+                    <img src="img/12.jpg">
+                    <div class="content">
+                    <div class="director">Bill Condon</div>
+                    <div class="title">Beauty and the Beast</div>
+                    <div class="topic">romance</div>
+                    <div class="des">
+                        Belle, a young woman who is imprisoned in a mysterious castle by  <br>
+                        a Beast, and how their relationship transforms as she uncovers his  <br>
+                        tragic past and the curse that has turned him into a monster​ 
+                    </div>
+                    <!-- BUTTONS  -->
+                    <div class="buttons">
+                        <button>WATCH</button>
+                    </div>
+                </div>
+            </div>                                                     
+
+                <!-- MALEFICENT-->
+                <div class="item">
+                    <img src="img/05-1.jpg">
+                    <div class="content">
+                        <div class="director">Robert Stromberg</div>
+                        <div class="title">Maleficent</div>
+                        <div class="topic">Fantasy</div>
+                        <div class="des">
+                            Maleficent reimagines the tale of Sleeping Beauty, <br>
+                            revealing the betrayal that turned Maleficent into <br>
+                            a vengeful fairy and her complex relationship with <br>
+                            Princess Aurora, whom she ultimately protects..
+                        </div>
+                        <!--BUTTONS -->
+                        <div class="buttons">
+                            <button>WATCH</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- MALEFICENT-->
+                <div class="item">
+                    <img src="img/14.jpg">
+                    <div class="content">
+                        <div class="director"> Rob Marshall</div>
+                        <div class="title">Pirates of the Caribbean</div>
+                        <div class="topic">Adventure</div>
+                        <div class="des">
+                            The series follows Captain Jack Sparrow, a quirky pirate <br>
+                            who embarks on thrilling adventures involving cursed treasures,  <br>
+                            ghost ships, and mythical enemies
+                        </div>
+                        <!--BUTTONS -->
+                        <div class="buttons">
+                            <button>WATCH</button>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FANTASTIC BEASTS -->
+                <div class="item">
+                    <img src="img/08-3.jpg">
+                    <div class="content">
+                        <div class="director">David Yates</div>
+                        <div class="title">Fantastic Beasts </div>
+                        <div class="topic">Adventure</div>
+                        <div class="des">
+                            The Fantastic Beasts series follows magizoologist <br>
+                            Newt Scamander as he protects magical creatures and <br>
+                            confronts the dark wizard Grindelwald. Set before <br>
+                            the events of Harry Potter, it explores the rising <br>
+                            conflict in the wizarding world
+                        </div>
+                        <!-- BUTTONS -->
+                        <div class="buttons">
+                            <button>WATCH</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COCO -->
+                <div class="item">
+                    <img src="img/13-hor.jpg">
+                    <div class="content">
+                        <div class="director">Lee Unkrich and Adrian Molina</div>
+                        <div class="title">Coco</div>
+                        <div class="topic">Animation</div>
+                        <div class="des">
+                            Coco tells the story of Miguel, a young boy who embarks<br>
+                            on an adventure to the Land of the Dead to discover his <br>
+                            family's musical heritage, despite his family's ban on <br>
+                            music. The film explores themes of family, memory, and <br>
+                            the importance of following one's passion​
+                        </div>
+                            <!-- BUTTONS  -->
+                        <div class="buttons">
+                            <button>WATCH</button>
+                        </div>
+                    </div>
+                </div> 
+
+
+        </div>
+
+        
+        <!-- THUMBNAIL START -->
+        <div class="thumbnail">
+
+            <!-- 1 Litle mermaid -->
+            <div class="item">
+                <img src="img/06-3.jpeg" alt="">
+                <div class="content">
+                    <div class="title">
+                        The Little Mermaid
+                    </div>
+                    <div class="des">
+                        Romance
+                    </div>
+                </div>
+            </div>
+
+            <!--6 Beauty and the Beast -->
+            <div class="item">
+                <img src="img/12.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        Beauty and the Beast
+                    </div>
+                    <div class="des">
+                        Romance
+                    </div>
+                </div>
+            </div>
+                   
+
+            <!--2 MALEFICENT -->
+            <div class="item">
+                <img src="img/05-1.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        Maleficent
+                    </div>
+                    <div class="des">
+                        Adventure
+                    </div>
+                </div>
+            </div>
+
+            <!--3 Pirates of the Caribbean -->
+            <div class="item">
+                <img src="img/14.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        Pirates of the Caribbean
+                    </div>
+                    <div class="des">
+                        Adventure
+                    </div>
+                </div>
+            </div>
+
+
+            <!--4 fantastic Beasts -->
+            <div class="item">
+                <img src="img/08-3.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        fantastic Beasts
+                    </div>
+                    <div class="des">
+                        Fantasy
+                    </div>
+                </div>
+            </div>
+
+            <!--5 Coco -->
+            <div class="item">
+                <img src="img/13-hor.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        Coco
+                    </div>
+                    <div class="des">
+                        Animation
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- THUMBNAIL END -->
+
+        <!-- ARROWS START -->
+         <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+         </div>
+        <!-- ARROWS END -->
+
+        <!-- time -->
+         <div class="time">
+
+         </div>
+    </div>
+
+
+        <section id="Trending">
+                <!-- TRENDING-->
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title">TRENDING</h1>
+                    <A name="C4"></A>
+                        <div class="movie-list-wrapper">
+                            <div class="movie-list">
+                            
+                              <!-- FIRST -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- SECOND -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while<br>
+                                    pursuing their dreams but drift apart. <br>
+                                    Years later, they reflect on how they <br>
+                                    shaped each other’s success.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- THIRD -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while<br>
+                                    pursuing their dreams but drift apart. <br>
+                                    Years later, they reflect on how they <br>
+                                    shaped each other’s success.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- FOURTH -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- FIFTH -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- SIXTH -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                             <!-- FIRST -->
+                             <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- FIRST -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- FIRST -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- FIRST -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <!-- FIRST -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            </div>
+
+                            <!-- arrow -->
+                            <i class='bx bx-chevron-right arrow'></i>
+                    </div>
+                </div>
+            </section>
+        
+
+
+
+  
+
+           
+        <section id="Movies">
+                <div class="movie-list-container">
+                    <h1 class="movie-list-title">MOVIES</h1>
+                    <div class="movie-list-wrapper">
+                        <div class="movie-list">
+                        
+                            <!-- FIRST -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- SECOND -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while<br>
+                                    pursuing their dreams but drift apart. <br>
+                                    Years later, they reflect on how they <br>
+                                    shaped each other’s success.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- THIRD -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while<br>
+                                    pursuing their dreams but drift apart. <br>
+                                    Years later, they reflect on how they <br>
+                                    shaped each other’s success.</p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- FOURTH -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- FIFTH -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- SIXTH -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                             <!-- FIRST -->
+                             <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- FIRST -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- FIRST -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                            <!-- FIRST -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+                            <!-- FIRST -->
+                            <div class="movie-list-item">
+                                <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                                <span class="movie-list-item-title">LA LA LAND</span>
+                                <p class="movie-list-item-desc">
+                                    Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                                </p>
+                                <button class="movie-list-item-button">Watch</button>
+                            </div>
+
+                        </div>
+
+                       <!-- arrow -->
+                       <i class='bx bx-chevron-right arrow'></i>
+
+                    </div>
+                </div>
+        </section>
+
+        <!-- CONTENT PLAISIO
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <!-- ITEM 1 
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="content-container">
+                    <div class="feautured-content">
+                        <div class="title1">Coco</div>
+                        <div class="topic1">Animation</div>
+                        <div class="des1">
+                            Coco tells the story of Miguel, a young boy who embarks<br>
+                            on an adventure to the Land of the Dead to discover his <br>
+                            family's musical heritage, despite his family's ban on <br>
+                            music. The film explores themes of family, memory, and <br>
+                            the importance of following one's passion​.
+                        </div>
+                        <!-- BUTTONS 
+                        <div class="buttons1">
+                            <button>WATCH</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 2 
+        <div class="carousel-item">
+            <div class="container">
+                <div class="content-container">
+                    <div class="feautured-content">
+                        <div class="director1">Rob Marshall</div>
+                        <div class="title1">Pirates of the Caribbean</div>
+                        <div class="topic1">Adventure</div>
+                        <div class="des1">
+                            The series follows Captain Jack Sparrow, a quirky pirate <br>
+                            who embarks on thrilling adventures involving cursed treasures,  <br>
+                            ghost ships, and mythical enemies.
+                        </div>
+                        <!-- BUTTONS 
+                        <div class="buttons1">
+                            <button>WATCH</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 3 
+        <div class="carousel-item">
+            <div class="container">
+                <div class="content-container">
+                    <div class="feautured-content">
+                        <div class="director1">David Yates</div>
+                        <div class="title1">Fantastic Beasts</div>
+                        <div class="topic1">Adventure</div>
+                        <div class="des1">
+                            The Fantastic Beasts series follows magizoologist <br>
+                            Newt Scamander as he protects magical creatures and <br>
+                            confronts the dark wizard Grindelwald. Set before <br>
+                            the events of Harry Potter, it explores the rising <br>
+                            conflict in the wizarding world.
+                        </div>
+                        <!-- BUTTONS 
+                        <div class="buttons1">
+                            <button>WATCH</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- CAROUSEL CONTROLS 
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>-->
+
+
+
+
+        <!-- CONTENT PLAISIO  -->
+        <div class="container">
+            <div class="content-container">
+                <div class="feautured-content" >
+                        <div class="title1">Coco</div>
+                        <div class="topic1">Animation</div>
+                        <div class="des1">
+                            Coco tells the story of Miguel, a young boy who embarks<br>
+                            on an adventure to the Land of the Dead to discover his <br>
+                            family's musical heritage, despite his family's ban on <br>
+                            music. The film explores themes of family, memory, and <br>
+                            the importance of following one's passion​
+                        </div>
+                            <!-- BUTTONS  -->
+                        <div class="buttons1">
+                            <button>WATCH</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SERIES -->
+        <section id="ANIMATIONS">
+            <div class="movie-list-container-animation">
+                <h1 class="movie-list-title">ANIMATIONS</h1>
+                <div class="movie-list-wrapper">
+                    <!-- <div class="movie-list">
+                    
+                        <!-- FIRST -->
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                            </p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <!-- SECOND -->
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while<br>
+                                pursuing their dreams but drift apart. <br>
+                                Years later, they reflect on how they <br>
+                                shaped each other’s success.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <!-- THIRD -->
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while<br>
+                                pursuing their dreams but drift apart. <br>
+                                Years later, they reflect on how they <br>
+                                shaped each other’s success.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <!-- FOURTH -->
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                            </p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <!-- FIFTH -->
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                            </p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <!-- SIXTH -->
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                            </p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                         <!-- FIRST -->
+                         <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                            </p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <!-- FIRST -->
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                            </p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <!-- FIRST -->
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                            </p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+                        <!-- FIRST -->
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                            </p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <!-- FIRST -->
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="img/01-hor.jpg" alt="">
+                            <span class="movie-list-item-title">LA LA LAND</span>
+                            <p class="movie-list-item-desc">
+                                Mia and Sebastian fall in love while pursuing their dreams but drift apart. 
+                            </p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                    </div> -->
+
+                    <!-- arrow -->
+                    <i class='bx bx-chevron-right arrow'></i>
+                </div>
+            </div>
+    </section>
+
+
+
+        <!-- SERIES -->
+        <section id="FANFICTION">
+            <div class="movie-list-container-animation">
+                <h1 class="movie-list-title">FAN-FICTION</h1>
+                <div id="movie-list" class="movie-list-wrapper">
+                    <!-- Movies will be dynamically loaded here via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+
+
+    <!-- COPYRIGHT -->
+     <div class="copyright">
+        <p>&#169; carpoolVenom All Right Reserved</p>
+     </div>
+
+    <!-- Link to js -->
+     <script src="js/app.js"></script>
+     <script src="js/main.js"></script>
+     <script src="../backend/api.js"></script>
+     <script src="../backend/index.js" type="module"></script>
+     <script src="../backend/components/categories.js"></script>
+     
+
+</body>
+</html>
